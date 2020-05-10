@@ -1,1 +1,1 @@
-countdown: python countdown.py
+discordbot: python discordbot.py
