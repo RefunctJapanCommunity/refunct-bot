@@ -41,12 +41,25 @@ async def ranking(ctx, arg):
     send_list = []
     for data in user_data.json().get('data'):
         if data.get('run').get('game') == "nd22xvd0" or data.get('run').get('game') == "w6jmye6j":
+            run_values = data.get('run').get('values')
             for links in data.get('run').get('links'):
                 if links.get('rel') == 'category':
                     category_url = links.get('uri')
                     category_data = requests.get(category_url)
                     category_name = category_data.json().get('data').get('name')
-                    send_list.append('category : ' + category_data.json().get('data').get('name'))
+                    if len(run_values) != 0: 
+                        for category_links in category_data.json().get('data').get('links'):
+                            if category_links.get('rel') == 'variables':
+                                variables_url = category_links.get('uri')
+                                variables_data = requests.get(variables_url)
+                                variables_choices = variables_data.json().get('data')[0].get('values').get('choices')
+                                for variables_keys in variables_choices.keys():
+                                    for run_value in run_values.values():
+                                        if run_value == variables_keys:
+                                            variables_name = variables_choices.get(variables_keys)
+                                            send_list.append('category : ' + category_name + '(' + variables_name + ')')
+                    else:
+                        send_list.append('category : ' + category_name)
             send_list.append('place : ' + str(data.get('place')))
     
     send_str = '\n'.join(send_list)
