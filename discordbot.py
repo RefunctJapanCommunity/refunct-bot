@@ -32,7 +32,8 @@ async def ranking(ctx, arg):
     user_search_url = 'https://www.speedrun.com/api/v1/users?name=' + arg
     user_search_data = requests.get(user_search_url).json()
     for user in user_search_data.get('data'):
-        user_id = user.get('id')
+        if user.get('names').get('international') == arg:
+            user_id = user.get('id')
 
     url = 'https://www.speedrun.com/api/v1/users/' + user_id + '/personal-bests'
     user_data = requests.get(url)
