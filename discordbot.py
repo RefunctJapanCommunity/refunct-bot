@@ -7,7 +7,7 @@ import datetime
 
 def get_time(time):
     m, s = divmod(time.seconds, 60)
-    time = str(m) + ':' + str(s) + '.' + time.microseconds
+    time = str(m) + ':' + str(s) + '.' + str(time.microseconds)
     return time
 
 bot = commands.Bot(command_prefix='!')
