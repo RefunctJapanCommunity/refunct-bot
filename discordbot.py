@@ -3,6 +3,12 @@ import os
 import traceback
 import time
 import requests
+import datetime
+
+def get_time(time):
+    m, s = divmod(time.seconds, 60)
+    time = str(m) + ':' + str(s) + '.' + time.milliseconds
+    return time
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -29,18 +35,20 @@ async def c(ctx):
 
 @bot.command()
 async def ranking(ctx, arg):
+    send_list = []
     user_search_url = 'https://www.speedrun.com/api/v1/users?name=' + arg
     user_search_data = requests.get(user_search_url).json()
     for user in user_search_data.get('data'):
         if user.get('names').get('international') == arg:
             user_id = user.get('id')
+            send_list.append('user name : ' + user.get('names').get('international'))
 
     url = 'https://www.speedrun.com/api/v1/users/' + user_id + '/personal-bests'
     user_data = requests.get(url)
 
-    send_list = []
     for data in user_data.json().get('data'):
         if data.get('run').get('game') == "nd22xvd0" or data.get('run').get('game') == "w6jmye6j":
+            run_time = get_time(datetime.timedelta(seconds=data.get('run').get('times').get('primary_t')))
             run_values = data.get('run').get('values')
             for links in data.get('run').get('links'):
                 if links.get('rel') == 'category':
@@ -61,6 +69,7 @@ async def ranking(ctx, arg):
                     else:
                         send_list.append('category : ' + category_name)
             send_list.append('place : ' + str(data.get('place')))
+            send_list.append('time : ' + run_time)
     
     send_str = '\n'.join(send_list)
     await ctx.send(send_str)
