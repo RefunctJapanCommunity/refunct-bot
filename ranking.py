@@ -27,7 +27,7 @@ def get_ranking(user_name):
                                         if run_value == variables_keys:
                                             variables_name = variables_choices.get(variables_keys)
                                             category_name = category_name + ' (' + variables_name + ')'
-        send_list.append(category_name.ljust(20) + '  ' + place + ' (' + run_time + ')')
+            send_list.append(category_name.ljust(20) + '  ' + place + ' (' + run_time + ')')
     return send_list
 
 def get_user(user_name):
