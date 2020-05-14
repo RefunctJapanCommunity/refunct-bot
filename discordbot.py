@@ -1,5 +1,5 @@
 from discord.ext import commands
-import ranking
+import ranking as r
 import os
 import traceback
 import time
@@ -29,7 +29,7 @@ async def c(ctx):
 
 @bot.command()
 async def ranking(ctx, arg):
-    send_list = ranking.get_ranking(arg)
+    send_list = r.get_ranking(arg)
     send_str = '\n'.join(send_list)
     await ctx.send(send_str)
 
