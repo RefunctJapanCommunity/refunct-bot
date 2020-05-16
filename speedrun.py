@@ -53,4 +53,4 @@ def get_status(data):
                                 if run_value == variables_keys:
                                     variables_name = variables_choices.get(variables_keys)
                                     category_name = category_name + ' (' + variables_name + ')'
-    return category_name.ljust(20) + '  ' + place + ' (' + run_time + ')'
+    return '  ' + category_name.ljust(20) + '\n    ' + place + ' (' + run_time + ')'
