@@ -1,5 +1,6 @@
 from discord.ext import commands
 import speedrun
+import technique
 import os
 import traceback
 import time
@@ -30,6 +31,12 @@ async def c(ctx):
 @bot.command()
 async def ranking(ctx, arg):
     send_list = speedrun.get_ranking(arg)
+    send_str = '\n'.join(send_list)
+    await ctx.send(send_str)
+
+@bot.command()
+async def tech(ctx, arg):
+    send_list = technique.get_tech(arg)
     send_str = '\n'.join(send_list)
     await ctx.send(send_str)
 
