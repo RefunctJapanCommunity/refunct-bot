@@ -18,7 +18,9 @@ def get_time(time):
 
 def get_place(place):
     place = str(place)
-    if place[-1] == '1':
+    if place == '11' or place == '12' or place == '13':
+        return place + 'th'
+    elif place[-1] == '1':
         return place + 'st'
     elif place[-1] == '2':
         return place + 'nd'
