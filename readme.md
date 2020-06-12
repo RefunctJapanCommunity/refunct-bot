@@ -1,4 +1,4 @@
-GunimusBot
+RefunctBot
 ====
 
 Discordに追加できるBOTです。  
