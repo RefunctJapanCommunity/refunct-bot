@@ -4,15 +4,15 @@ def get_time(time):
     hour = str(h)
     mins = str(m)
     sec = str(s)
-    ms = str(time.microseconds)[:2]
+    ms = str(time.microseconds)[:-3]
     if h != 0:
         if time.microseconds != 0:
-            return hour + 'h ' + mins.zfill(2) + 'm ' + sec.zfill(2) + 's ' + ms.zfill(2) + '0ms'
+            return hour + 'h ' + mins.zfill(2) + 'm ' + sec.zfill(2) + 's ' + ms.zfill(3) + 'ms'
         else:
             return hour + 'h ' + mins.zfill(2) + 'm ' + sec.zfill(2) + 's'
     else:
         if time.microseconds != 0:
-            return mins + 'm ' + sec.zfill(2) + 's ' + ms.zfill(2) + '0ms'
+            return mins + 'm ' + sec.zfill(2) + 's ' + ms.zfill(3) + 'ms'
         else:
             return mins + 'm ' + sec.zfill(2) + 's'
 
