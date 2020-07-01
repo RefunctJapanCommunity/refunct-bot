@@ -18,20 +18,17 @@ def get_tech(tech_name):
         send_list.append('https://www.youtube.com/watch?v=WZUohS0QNCI')
     elif tech_name == 'Hdnoftr':
         send_list.append('https://www.youtube.com/watch?v=keKOAGSsFJg')
+    elif tech_name == 'list':
+        send_list.append('technique name list\n')
+        send_list.append('CrouchGrabs')
+        send_list.append('Fast9')
+        send_list.append('DiveSkip')
+        send_list.append('ForbiddenPipeJump')
+        send_list.append('PipeJump')
+        send_list.append('13CornerJump')
+        send_list.append('SpiralSkip')
+        send_list.append('Hdnoftr')
+        send_list.append('YUSAMADive')
     else:
         send_list.append(f'{tech_name} is not technique name')
-    return send_list
-
-def get_tech_list():
-    send_list = []
-    send_list.append('technique name list\n')
-    send_list.append('CrouchGrabs')
-    send_list.append('Fast9')
-    send_list.append('DiveSkip')
-    send_list.append('ForbiddenPipeJump')
-    send_list.append('PipeJump')
-    send_list.append('13CornerJump')
-    send_list.append('SpiralSkip')
-    send_list.append('Hdnoftr')
-    send_list.append('YUSAMADive')
     return send_list

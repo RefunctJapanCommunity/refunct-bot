@@ -23,6 +23,7 @@ speedrun.comのユーザー名からRefunctのカテゴリーと順位を返し�
 ## Technique
 コマンドは`!tech {テクニック名}`
 Refunctで使えるテクニックを入れると参考URLを返します。  
+「list」と入力するとテクニック名の一覧が表示されます。
 
 # About the future
 現在はRefunctにだけ対応しておりますが、  
