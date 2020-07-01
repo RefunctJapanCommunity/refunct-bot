@@ -40,4 +40,10 @@ async def tech(ctx, arg):
     send_str = '\n'.join(send_list)
     await ctx.send(send_str)
 
+@bot.command()
+async def tech(ctx):
+    send_list = technique.get_tech_list()
+    send_str = '\n'.join(send_list)
+    await ctx.send(send_str)
+
 bot.run(token)
