@@ -47,7 +47,7 @@ async def ranking(ctx, arg):
             previous_id = game_id
             game_id = data.get('run').get('game')
             if previous_id != game_id:
-                if count % 3 == 0 and count > 2:
+                if not count == 0:
                     send_str = '\n'.join(send_list)
                     await ctx.send(send_str)
                     send_list.clear()
