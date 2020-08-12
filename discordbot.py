@@ -53,7 +53,9 @@ async def ranking(ctx, arg):
                     send_list.clear()
                 count = count + 1
                 send_list.append('\n' + speedrun.get_title(game_id))
-            send_list.append(speedrun.get_records(data))
+            records = speedrun.get_records(data)
+            if not records == '':
+                send_list.append(records)
         if len(send_list) == 1:
             send_list.append('\n' + 'records is not found')
         send_str = '\n'.join(send_list)
