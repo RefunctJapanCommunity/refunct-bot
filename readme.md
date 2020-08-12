@@ -1,8 +1,8 @@
-RefunctBot
+RTABot
 ====
 
 Discordに追加できるBOTです。  
-RefunctのRTAに便利なコマンドをまとめています。
+RTAに便利なコマンドをまとめています。
 
 # Install
 
@@ -16,23 +16,10 @@ RefunctのRTAに便利なコマンドをまとめています。
 並走などをする際にお使いください。
 
 ## Ranking
+※テキストチャンネルの名前を「記録」「きろく」「record」のいずれかが含まれるようにしてください。  
 コマンドは`!ranking {speedrun.comのユーザー名}`  
 speedrun.comのユーザー名からRefunctのカテゴリーと順位を返します。  
 自分、または他の走者のランキング一覧が取得できます。
-
-## Technique
-コマンドは`!tech {テクニック名}`
-Refunctで使えるテクニックを入れると参考URLを返します。  
-「list」と入力するとテクニック名の一覧が表示されます。
-
-# About the future
-現在はRefunctにだけ対応しておりますが、  
-将来的には全てのゲームに対応できるように考えています。  
-アイデアは随時募集中です！
-
-# Other
-[Refunct](https://store.steampowered.com/app/406150/Refunct/)はSteamにて販売中なのでご興味がございましたら是非。  
-通常価格でも310円です！
 
 # Author
 連絡先はこちらまで  

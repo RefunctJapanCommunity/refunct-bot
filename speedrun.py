@@ -10,7 +10,7 @@ def get_user(user_name):
     user_id = get_user_id(user_name)
     if user_id == '':
         send_list.append(user_name + ' is not found')
-        return send_list
+        return send_list, user_id
     
     send_list.append('user name : ' + user_name)
     return send_list, user_id

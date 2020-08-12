@@ -35,10 +35,12 @@ async def ranking(ctx, arg):
         send_list = refunct.get_ranking(arg)
         send_str = '\n'.join(send_list)
         await ctx.send(send_str)
-    elif "記録確認所" in str(ctx.channel):
+    elif "記録" in str(ctx.channel) or "きろく" in str(ctx.channel) or "record" in str(ctx.channel):
         user, user_id = speedrun.get_user(arg)
         send_str = '\n'.join(user)
         await ctx.send(send_str)
+        if user_id == '':
+            return
         user_data = speedrun.get_user_data(user_id)
         send_list = []
         game_id = ''
