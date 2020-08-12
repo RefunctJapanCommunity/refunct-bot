@@ -31,7 +31,7 @@ async def c(ctx):
 
 @bot.command()
 async def ranking(ctx, arg):
-    if "雑談" in str(ctx.channel):
+    if "雑談" in str(ctx.channel) or "記録確認所" in str(ctx.channel):
         if "Refunct" in str(ctx.guild):
             send_list = refunct.get_ranking(arg)
         else:
