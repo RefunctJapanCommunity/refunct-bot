@@ -1,5 +1,6 @@
 from discord.ext import commands
 import speedrun
+import refunct
 import technique
 import os
 import traceback
@@ -30,14 +31,25 @@ async def c(ctx):
 
 @bot.command()
 async def ranking(ctx, arg):
-    send_list = speedrun.get_ranking(arg)
-    send_str = '\n'.join(send_list)
-    await ctx.send(send_str)
+    if "雑談" in str(ctx.channel):
+        if "Refunct" in str(ctx.guild):
+            send_list = refunct.get_ranking(arg)
+        else:
+            send_list = speedrun.get_ranking(arg)
+        send_str = '\n'.join(send_list)
+        await ctx.send(send_str)
 
 @bot.command()
 async def tech(ctx, arg):
-    send_list = technique.get_tech(arg)
-    send_str = '\n'.join(send_list)
-    await ctx.send(send_str)
+    if "雑談" in str(ctx.channel):
+        if "Refunct" in str(ctx.guild):
+            send_list = technique.get_tech(arg)
+            send_str = '\n'.join(send_list)
+            await ctx.send(send_str)
+
+@bot.command()
+async def test(ctx):
+    if "ぐにぴったん" in str(ctx.guild):
+        await ctx.send(ctx.guild)
 
 bot.run(token)

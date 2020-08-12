@@ -18,9 +18,10 @@ def get_ranking(user_name):
     for data in user_data:
         previous_id = game_id
         game_id = data.get('run').get('game')
-        if previous_id != game_id:
-            send_list.append('\n' + get_title(game_id))
-        send_list.append(get_records(data))
+        if game_id == "nd22xvd0" or game_id == "w6jmye6j":
+            if previous_id != game_id:
+                send_list.append('\n' + get_title(game_id))
+            send_list.append(get_records(data))
 
     if len(send_list) == 1:
         send_list.append('\n' + 'records is not found')
