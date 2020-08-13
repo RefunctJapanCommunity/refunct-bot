@@ -16,6 +16,14 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.command()
+async def schedule(ctx):
+    await ctx.send('https://horaro.org/rtaij/online2020')
+
+@bot.command()
+async def rij(ctx):
+    await ctx.send('https://www.twitch.tv/rtainjapan')
+
+@bot.command()
 async def c(ctx):
     await ctx.send('The race will begin in 10 seconds!')
     time.sleep(5)
