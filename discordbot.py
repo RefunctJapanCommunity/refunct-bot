@@ -24,6 +24,10 @@ async def rij(ctx):
     await ctx.send('https://www.twitch.tv/rtainjapan')
 
 @bot.command()
+async def lagoon(ctx):
+    await ctx.send('そんなCommand…返事はPASSさ…')
+
+@bot.command()
 async def c(ctx):
     await ctx.send('The race will begin in 10 seconds!')
     time.sleep(5)
