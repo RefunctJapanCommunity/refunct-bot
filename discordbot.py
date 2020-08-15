@@ -25,8 +25,12 @@ async def rij(ctx):
     await ctx.send('https://www.twitch.tv/rtainjapan')
 
 @bot.command()
+async def muteki(ctx):
+    await ctx.send('https://mutekijikan.stores.jp/')
+
+@bot.command()
 async def lagoon(ctx):
-    randnum = random.randrange(10)
+    randnum = random.randrange(14)
     if randnum == 0:
         await ctx.send('そんなCommand…返事はPASSさ…')
     elif randnum == 1:
@@ -47,6 +51,14 @@ async def lagoon(ctx):
         await ctx.send('最速の彼方に行っちまったのか…')
     elif randnum == 9:
         await ctx.send('SouthYOKOHAMA…俺たちのSTREET…')
+    elif randnum == 10:
+        await ctx.send('伝説が始まる…')
+    elif randnum == 11:
+        await ctx.send('STREETを流してるとREWARDS目当ての走り屋がPASSINGしかけてくる…')
+    elif randnum == 12:
+        await ctx.send('ほんとに、すまねえ！いまのオレにはあやまることしかできねえ…')
+    elif randnum == 13:
+        await ctx.send('…夢を見てたんだ…')
 
 @bot.command()
 async def c(ctx):
