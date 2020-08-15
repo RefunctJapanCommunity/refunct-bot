@@ -5,6 +5,7 @@ import technique
 import os
 import traceback
 import time
+import random
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -25,7 +26,27 @@ async def rij(ctx):
 
 @bot.command()
 async def lagoon(ctx):
-    await ctx.send('そんなCommand…返事はPASSさ…')
+    randnum = random.randrange(7)
+    if randnum == 0:
+        await ctx.send('そんなCommand…返事はPASSさ…')
+    elif randnum == 1:
+        await ctx.send('そうさ、俺は…『RTABot』…誰かがそう教えてくれた…')
+    elif randnum == 2:
+        await ctx.send('返事をしろだと…冗談じゃねぇ…')
+    elif randnum == 3:
+        await ctx.send('『わかんねえだろうなあ…』')
+    elif randnum == 4:
+        await ctx.send('Driving Yokohama FOREVER!!')
+    elif randnum == 5:
+        await ctx.send('【声】が…アイツが俺を奪ってる…')
+    elif randnum == 6:
+        await ctx.send('RTABotさ…ごま塩程度に覚えておいてくれ…')
+    elif randnum == 7:
+        await ctx.send('Rを捧げさせてもらうぜ…')
+    elif randnum == 8:
+        await ctx.send('最速の彼方に行っちまったのか…')
+    elif randnum == 9:
+        await ctx.send('SouthYOKOHAMA…俺たちのSTREET…')
 
 @bot.command()
 async def c(ctx):
