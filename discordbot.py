@@ -26,7 +26,7 @@ async def rij(ctx):
 
 @bot.command()
 async def lagoon(ctx):
-    randnum = random.randrange(7)
+    randnum = random.randrange(10)
     if randnum == 0:
         await ctx.send('そんなCommand…返事はPASSさ…')
     elif randnum == 1:
