@@ -122,5 +122,8 @@ async def tech(ctx, arg):
 async def test(ctx):
     if "ぐにぴったん" in str(ctx.guild):
         await ctx.send(ctx.guild)
+        await ctx.send(ctx.channel)
+        await ctx.send(ctx.author)
+        await ctx.send(ctx.me)
 
 bot.run(token)
