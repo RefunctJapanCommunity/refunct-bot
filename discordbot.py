@@ -18,7 +18,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def schedule(ctx):
-    await ctx.send('https://horaro.org/rtaij/online2020')
+    await ctx.send('https://horaro.org/rtaij/rtaij2020')
 
 @bot.command()
 async def rij(ctx):
