@@ -1,7 +1,3 @@
-import requests
-import datetime
-import common
-
 prefix_url = 'https://www.speedrun.com/api/v1'
 game_id = ''
 

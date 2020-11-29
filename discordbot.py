@@ -1,10 +1,13 @@
-from discord.ext import commands
-import speedrun
-import refunct
-import technique
 import os
-import traceback
 import time
+import traceback
+import datetime
+import requests
+from discord.ext import commands
+from script import common
+from script import speedrun
+from script import refunct
+from script import technique
 
 bot = commands.Bot(command_prefix='!')
 token = os.environ['DISCORD_BOT_TOKEN']
