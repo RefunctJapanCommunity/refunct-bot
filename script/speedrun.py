@@ -1,3 +1,5 @@
+import requests
+
 prefix_url = 'https://www.speedrun.com/api/v1'
 game_id = ''
 
