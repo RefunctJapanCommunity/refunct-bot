@@ -129,4 +129,10 @@ async def test(ctx):
         await ctx.send(ctx.author)
         await ctx.send(ctx.me)
 
+@bot.command()
+async def ranking_debug(ctx, arg):
+    send_list = refunct.get_ranking(arg)
+    send_str = '\n'.join(send_list)
+    await ctx.send(send_str)
+
 bot.run(token)
