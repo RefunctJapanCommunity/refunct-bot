@@ -1,8 +1,7 @@
-RTABot
+RefunctBot
 ====
 
-Discordに追加できるBOTです。  
-RTAに便利なコマンドをまとめています。
+運営しているRefunctJPコミュニティのBOTです。
 
 # Install
 
